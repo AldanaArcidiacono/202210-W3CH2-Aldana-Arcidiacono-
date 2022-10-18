@@ -23,7 +23,7 @@ export abstract class Component {
             return false;
         }
 
-        element.innerHTML = template;
+        element.innerHTML += template;
         return true;
     }
 }
