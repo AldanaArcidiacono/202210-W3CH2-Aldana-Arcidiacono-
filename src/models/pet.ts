@@ -6,9 +6,8 @@ export class Pet {
     constructor(
         public name: string,
         public breed: string,
-        public adopter: string | null
-    ) //public isAdopted: boolean
-    {
+        public adopter: string //public isAdopted: boolean
+    ) {
         this.id = Pet.createId();
     }
 }

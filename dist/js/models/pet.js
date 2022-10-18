@@ -1,5 +1,6 @@
 export class Pet {
-    constructor(name, breed, adopter) {
+    constructor(name, breed, adopter //public isAdopted: boolean
+    ) {
         this.name = name;
         this.breed = breed;
         this.adopter = adopter;
