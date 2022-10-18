@@ -1,6 +1,6 @@
 import { Component } from './component';
 
-export class Header extends Component {
+export class Footer extends Component {
     template: string;
     constructor(public selector: string) {
         super();
@@ -8,8 +8,9 @@ export class Header extends Component {
         this.renderAdd(this.selector, this.template);
     }
     createTemplate() {
-        return `<header>
-            <h1>Adopt a pet!</h1>
-        </header>`;
+        return `<footer>
+            <address>Aldana Arcidiacono</address>
+        </footer>
+        `;
     }
 }
