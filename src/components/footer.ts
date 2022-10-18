@@ -1,4 +1,4 @@
-import { Component } from './component';
+import { Component } from './component.js';
 
 export class Footer extends Component {
     template: string;
@@ -8,9 +8,6 @@ export class Footer extends Component {
         this.renderAdd(this.selector, this.template);
     }
     createTemplate() {
-        return `<footer>
-            <address>Aldana Arcidiacono</address>
-        </footer>
-        `;
+        return `<footer><address>Aldana Arcidiacono</address></footer>`;
     }
 }

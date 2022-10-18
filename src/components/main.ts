@@ -1,6 +1,6 @@
 import { Component } from './component.js';
 
-export class Header extends Component {
+export class Main extends Component {
     template: string;
     constructor(public selector: string) {
         super();
@@ -8,6 +8,6 @@ export class Header extends Component {
         this.renderAdd(this.selector, this.template);
     }
     createTemplate() {
-        return `<header><h1>Adopt a pet!</h1></header>`;
+        return `<main></main>`;
     }
 }
