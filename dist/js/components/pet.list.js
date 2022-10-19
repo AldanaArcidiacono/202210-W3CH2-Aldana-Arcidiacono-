@@ -41,7 +41,6 @@ export class PetList extends Component {
             .value;
         const breed = document.querySelector('#breed')
             .value;
-        const isAdopted = document.querySelector('#adopted').value;
         const adopter = document.querySelector('#adopter-name').value;
         this.pets.push(new Pet(name, breed, adopter));
         this.storeService.setStore(this.pets);

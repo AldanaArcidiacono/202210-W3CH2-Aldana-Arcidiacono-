@@ -50,9 +50,6 @@ export class PetList extends Component {
             .value;
         const breed = (document.querySelector('#breed') as HTMLInputElement)
             .value;
-        const isAdopted = (
-            document.querySelector('#adopted') as HTMLInputElement
-        ).value;
         const adopter = (
             document.querySelector('#adopter-name') as HTMLInputElement
         ).value;
