@@ -6,7 +6,8 @@ export class ItemPet extends Component {
     constructor(
         public selector: string,
         public item: Pet,
-        public handelDelete: (id: number) => void
+        public handelDelete: (id: number) => void,
+        public handelAdoption: (id: number) => void
     ) {
         super();
         this.manageComponent();
@@ -20,12 +21,23 @@ export class ItemPet extends Component {
             ).addEventListener('click', () => {
                 this.handelDelete(this.item.id);
             });
+            (
+                document.querySelector(`#c${this.item.id}`) as HTMLElement
+            ).addEventListener('change', () => {
+                this.handelAdoption(this.item.id);
+            });
         }, 100);
     }
     createTemplate() {
-        return `
-            <li> ${this.item.id} - ${this.item.name} - ${this.item.breed} - ${this.item.adopter}
-            <span class="delete" id="d${this.item.id}">🗑️</span>
-            </li>`;
+        return `<li> 
+        <input id="c${this.item.id}" type="checkbox" ${
+            this.item.isAdopted ? 'checked' : ''
+        }>
+        <span>${this.item.id}</span> - 
+        <span>${this.item.name}</span> -
+        <span>${this.item.breed}</span> -
+        <span> ${this.item.adopter}</span> -
+        <span class="delete" id="d${this.item.id}">🗑️</span>
+        </li>`;
     }
 }

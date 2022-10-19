@@ -1,10 +1,11 @@
 import { Component } from './component.js';
 export class ItemPet extends Component {
-    constructor(selector, item, handelDelete) {
+    constructor(selector, item, handelDelete, handelAdoption) {
         super();
         this.selector = selector;
         this.item = item;
         this.handelDelete = handelDelete;
+        this.handelAdoption = handelAdoption;
         this.manageComponent();
     }
     manageComponent() {
@@ -14,12 +15,19 @@ export class ItemPet extends Component {
             document.querySelector(`#d${this.item.id}`).addEventListener('click', () => {
                 this.handelDelete(this.item.id);
             });
+            document.querySelector(`#c${this.item.id}`).addEventListener('change', () => {
+                this.handelAdoption(this.item.id);
+            });
         }, 100);
     }
     createTemplate() {
-        return `
-            <li> ${this.item.id} - ${this.item.name} - ${this.item.breed} - ${this.item.adopter}
-            <span class="delete" id="d${this.item.id}">🗑️</span>
-            </li>`;
+        return `<li> 
+        <input id="c${this.item.id}" type="checkbox" ${this.item.isAdopted ? 'checked' : ''}>
+        <span>${this.item.id}</span> - 
+        <span>${this.item.name}</span> -
+        <span>${this.item.breed}</span> -
+        <span> ${this.item.adopter}</span> -
+        <span class="delete" id="d${this.item.id}">🗑️</span>
+        </li>`;
     }
 }
