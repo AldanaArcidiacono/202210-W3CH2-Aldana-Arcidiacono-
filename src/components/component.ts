@@ -1,5 +1,6 @@
 export abstract class Component {
     renderInner(selector: string, template: string) {
+        if (!selector) return false;
         const element = document.querySelector(selector);
         if (element === null) {
             return false;
@@ -9,6 +10,7 @@ export abstract class Component {
     }
 
     renderOuter(selector: string, template: string) {
+        if (!selector) return false;
         const element = document.querySelector(selector);
         if (element === null) {
             return false;
@@ -18,6 +20,7 @@ export abstract class Component {
     }
 
     renderAdd(selector: string, template: string) {
+        if (!selector) return false;
         const element = document.querySelector(selector);
         if (element === null) {
             return false;
