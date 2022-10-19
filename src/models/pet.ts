@@ -1,13 +1,15 @@
 export class Pet {
     id: number;
+    isAdopted: boolean;
     static createId() {
-        return Math.round(Math.random() * 20);
+        return Math.round(Math.random() * 200);
     }
     constructor(
         public name: string,
         public breed: string,
-        public adopter: string //public isAdopted: boolean
+        public adopter: string
     ) {
         this.id = Pet.createId();
+        this.isAdopted = false;
     }
 }
