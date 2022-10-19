@@ -7,6 +7,6 @@ export class Pet {
         this.isAdopted = false;
     }
     static createId() {
-        return Math.round(Math.random() * 200);
+        return Math.round(Math.random() * 10);
     }
 }

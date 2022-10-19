@@ -2,7 +2,7 @@ export class Pet {
     id: number;
     isAdopted: boolean;
     static createId() {
-        return Math.round(Math.random() * 200);
+        return Math.round(Math.random() * 10);
     }
     constructor(
         public name: string,

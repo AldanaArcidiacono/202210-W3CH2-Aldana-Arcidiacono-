@@ -30,10 +30,11 @@ export class ItemPet extends Component {
     }
     createTemplate() {
         return `<li> 
+        <span>${this.item.id}</span> - 
+        <label>La mascota esta adoptada</label>
         <input id="c${this.item.id}" type="checkbox" ${
             this.item.isAdopted ? 'checked' : ''
         }>
-        <span>${this.item.id}</span> - 
         <span>${this.item.name}</span> -
         <span>${this.item.breed}</span> -
         <span> ${this.item.adopter}</span> -
