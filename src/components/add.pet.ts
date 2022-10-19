@@ -27,10 +27,6 @@ export class AddPet extends Component {
                 <input type="text" id="breed" placeholder="Ingresa su especie">
             </div>
             <div>
-                <label for="adopted">Está adoptado?</label>
-                <input type="checkbox" id="adopted">
-            </div>
-            <div>
                 <input type="text" id="adopter-name" placeholder="Ingresa el nombre de su adoptante">
             </div>
             <button type="submit">Cargar mascota!</button>
